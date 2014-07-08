@@ -5,7 +5,7 @@ import java.net.*;
 import java.util.*;
 
 /*
-    usage :     java -cp target com.redhat.gpe.tools.UDPResponder 192.168.122.1 45588
+    usage :     java -cp target/networkDiagnostics-1.0.jar com.redhat.gpe.tools.UDPResponder 192.168.122.1 45588
  */
 public class UDPResponder {
     public static void main(String[] args) throws Exception {

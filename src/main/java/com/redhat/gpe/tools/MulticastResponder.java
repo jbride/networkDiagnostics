@@ -8,7 +8,7 @@ import java.util.*;
     A multicast group is specified by a class D IP address and by a standard UDP port number
     Class D IP addresses are in the range 224.0.0.0 to 239.255.255.255, inclusive. The address 224.0.0.0 is reserved and should not be used
 
-    usage :  java -cp target com.redhat.gpe.tools.MulticastResponder 239.9.9.9 45588 $HOSTNAME
+    usage :  java -cp target/networkDiagnostics-1.0.jar com.redhat.gpe.tools.MulticastResponder 239.9.9.9 45588 $HOSTNAME
  */
 public class MulticastResponder {
     public static void main(String[] args) throws Exception {

@@ -4,7 +4,7 @@ import java.net.*;
 import java.io.*;
 
 /*
-    usage :  java -cp target com.redhat.gpe.tools.TCPSender 192.168.122.1 45588
+    usage :  java -cp target/networkDiagnostics-1.0.jar com.redhat.gpe.tools.TCPSender 192.168.122.1 45588
  */
 public class TCPSender {
 

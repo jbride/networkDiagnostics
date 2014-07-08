@@ -6,8 +6,8 @@ import java.util.*;
 
 
 /*
-    usage :  java -cp target com.redhat.gpe.tools.UDPSender 192.168.122.1 45588         (UDP unicast scenario)
-             java -cp target com.redhat.gpe.tools.UDPSender 239.9.9.9 45588             (multicast scenario)
+    usage :  java -cp target/networkDiagnostics-1.0.jar com.redhat.gpe.tools.UDPSender 192.168.122.1 45588         (UDP unicast scenario)
+             java -cp target/networkDiagnostics-1.0.jar com.redhat.gpe.tools.UDPSender 239.9.9.9 45588             (multicast scenario)
  */
 public class UDPSender {
 
