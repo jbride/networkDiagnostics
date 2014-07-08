@@ -1,0 +1,21 @@
+== Purpose
+. simple test framework to determine health of the both TCP, UDP unicast and UDP multicast networks
+. this tool can also identify whether a particular UDP multicast socket is already being used and by whom
+
+NOTE:  
+jgroups provides org.jgroups.tests.McastSenderTest / McastReceiverTest out of the box : https://access.redhat.com/site/solutions/123073
+
+== Usage 
+
+. compile project
+.. cd into this project's root directory
+.. execute: mvn clean install
+
+. execute project
+.. review javadocs in source for further commands to start test framework
+
+== wireshark filter
+igmp.type || tcp.port == 45588 || udp.port==45588
+
+== possible routing table modifications
+(as root)  route add -net 239.0.0.0 netmask 255.0.0.0 eth0
