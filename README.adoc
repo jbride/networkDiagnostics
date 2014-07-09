@@ -17,7 +17,7 @@ jgroups provides org.jgroups.tests.McastSenderTest / McastReceiverTest out of th
 .. execute: mvn clean install
 
 . execute tests
-.. UDP multicast test
+.. *UDP multicast test*
 ... In terminal 1
 +
 -----
@@ -30,7 +30,7 @@ java -cp target/networkDiagnostics-1.0.jar com.redhat.gpe.tools.MulticastRespond
 java -cp target/networkDiagnostics-1.0.jar com.redhat.gpe.tools.UDPSender 239.9.9.9 45588
 -----
 
-.. UDP test
+.. *UDP test*
 ... In terminal 1
 +
 -----
@@ -43,7 +43,7 @@ java -cp target/networkDiagnostics-1.0.jar com.redhat.gpe.tools.UDPResponder 192
 java -cp target/networkDiagnostics-1.0.jar com.redhat.gpe.tools.UDPSender 239.9.9.9 45588
 -----
 
-.. TCP test
+.. *TCP test*
 ... In terminal 1
 +
 -----
