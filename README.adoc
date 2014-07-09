@@ -1,8 +1,13 @@
+:data-uri:
+:toc2:
+
+image::doc/images/rhheader.png[width=900]
+
 == Purpose
 . simple test framework to determine health of the both TCP, UDP unicast and UDP multicast networks
 . this tool can also identify whether a particular UDP multicast socket is already being used and by whom
 
-NOTE:  
+== Alternative  
 jgroups provides org.jgroups.tests.McastSenderTest / McastReceiverTest out of the box : https://access.redhat.com/site/solutions/123073
 
 == Usage 
@@ -11,8 +16,46 @@ jgroups provides org.jgroups.tests.McastSenderTest / McastReceiverTest out of th
 .. cd into this project's root directory
 .. execute: mvn clean install
 
-. execute project
-.. review javadocs in source for further commands to start test framework
+. execute tests
+.. UDP multicast test
+... In terminal 1
++
+-----
+java -cp target/networkDiagnostics-1.0.jar com.redhat.gpe.tools.MulticastResponder 239.9.9.9 45588 $HOSTNAME
+-----
+
+... In terminal 2
++
+-----
+java -cp target/networkDiagnostics-1.0.jar com.redhat.gpe.tools.UDPSender 239.9.9.9 45588
+-----
+
+.. UDP test
+... In terminal 1
++
+-----
+java -cp target/networkDiagnostics-1.0.jar com.redhat.gpe.tools.UDPResponder 192.168.122.1 45588
+-----
+
+... In terminal 2
++
+-----
+java -cp target/networkDiagnostics-1.0.jar com.redhat.gpe.tools.UDPSender 239.9.9.9 45588
+-----
+
+.. TCP test
+... In terminal 1
++
+-----
+java -cp target/networkDiagnostics-1.0.jar com.redhat.gpe.tools.TCPResponder 192.168.122.1 45588
+-----
+
+... In terminal 2
++
+-----
+java -cp target/networkDiagnostics-1.0.jar com.redhat.gpe.tools.TCPSender 192.168.122.1 45588
+-----
+
 
 == wireshark filter
 igmp.type || tcp.port == 45588 || udp.port==45588
