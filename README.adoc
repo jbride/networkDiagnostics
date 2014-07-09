@@ -4,7 +4,7 @@
 image::doc/images/rhheader.png[width=900]
 
 == Purpose
-. simple test framework to determine health of the both TCP, UDP unicast and UDP multicast networks
+. simple test framework to determine health of TCP, UDP unicast and UDP multicast networks
 . this tool can also identify whether a particular UDP multicast socket is already being used and by whom
 
 == Alternative  
